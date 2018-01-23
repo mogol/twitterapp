@@ -1,0 +1,66 @@
+PODS:
+  - Firebase/Core (4.8.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.13)
+  - Firebase/Database (4.8.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.3)
+  - firebase_core (0.0.1):
+    - Firebase/Core
+    - Flutter
+  - firebase_database (0.0.1):
+    - Firebase/Database
+    - Flutter
+  - FirebaseAnalytics (4.0.5):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.13):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.3):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (2.0.8):
+    - FirebaseCore (~> 4.0)
+  - Flutter (1.0.0)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - leveldb-library (1.20)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+
+DEPENDENCIES:
+  - firebase_core (from `/Users/german/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.0.5/ios`)
+  - firebase_database (from `/Users/german/.pub-cache/hosted/pub.dartlang.org/firebase_database-0.3.4/ios`)
+  - Flutter (from `/Users/german/Projects/github/flutter/bin/cache/artifacts/engine/ios`)
+
+EXTERNAL SOURCES:
+  firebase_core:
+    :path: /Users/german/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.0.5/ios
+  firebase_database:
+    :path: /Users/german/.pub-cache/hosted/pub.dartlang.org/firebase_database-0.3.4/ios
+  Flutter:
+    :path: /Users/german/Projects/github/flutter/bin/cache/artifacts/engine/ios
+
+SPEC CHECKSUMS:
+  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
+  firebase_core: d68adae67f63339ff8f2128de75c5442c7bb69ed
+  firebase_database: a5b2f9b0ebc0522135032c93000d0c1184116eb1
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
+  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  Flutter: 7eb41cd1fd524b90d7f22bceb20da2c39338b089
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+
+PODFILE CHECKSUM: 351e02e34b831289961ec3558a535cbd2c4965d2
+
+COCOAPODS: 1.4.0

@@ -1,3 +1,4 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -6,16 +7,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new TweetList(),
+      home: new DatabaseWidget(),
+    );
+  }
+}
+
+class DatabaseWidget extends StatefulWidget {
+  @override
+  _DatabaseWidgetState createState() => new _DatabaseWidgetState();
+}
+
+class _DatabaseWidgetState extends State<DatabaseWidget> {
+  List<Tweet> _tweets = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    final database = FirebaseDatabase.instance;
+    database.reference().child("tweets").once().then((snapshot) {
+      final Map<String, dynamic> data = snapshot.value;
+      final tweets = data.values.map((t) => new Tweet(text: t["text"]));
+      setState(() => _tweets = tweets.toList());
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new TweetList(
+      tweets: _tweets,
     );
   }
 }
 
 class TweetList extends StatelessWidget {
+  TweetList({this.tweets});
+
+  final List<Tweet> tweets;
+
   @override
   Widget build(BuildContext context) {
-    final List<Tweet> tweets = Tweet.all();
-
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Timeline"),
@@ -39,9 +70,4 @@ class Tweet {
   final String user;
   final String text;
   final String date;
-
-  static List<Tweet> all() => new List.generate(
-        10,
-        (i) => new Tweet(user: "User $i", text: "Tweet $i", date: "${i}h"),
-      );
 }
